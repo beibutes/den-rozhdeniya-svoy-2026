@@ -36,9 +36,25 @@ den-rozhdeniya-svoy-2026/
 ├── js/booking.js         — слой данных (Supabase / localStorage)
 ├── js/admin.js           — логика админ-панели
 ├── js/config.js          — ключи Supabase (URL + anon)
-├── data/wishlist.js      — 10 позиций
+├── data/wishlist.js      — позиции wish-листа (АВТОГЕНЕРАЦИЯ)
+├── tools/build-wishlist.mjs — генератор wish-листа из источника
 └── data/schema.sql       — схема БД и политики безопасности
 ```
+
+## Источник wish-листа (важно)
+`data/wishlist.js` **генерируется** из файла предпочтений
+`memory/user-gift-preferences.md` (секция «## Подобранный список»).
+Позиции делятся на 3 ценовых тира (Доступный / Средний / Премиум),
+отмеченные ⭐ показываются с бейджем «Выбор именинника».
+
+**При изменении источника** — пересобрать и задеплоить:
+```
+node tools/build-wishlist.mjs      # обновит data/wishlist.js
+git add -A && git commit -m "..." && git push   # деплой
+```
+Фото берутся по категориям из Unsplash (можно заменить на точные в
+каталоге внутри `tools/build-wishlist.mjs`). Новая позиция без фото
+получит эмодзи-заглушку и предупреждение в консоли генератора.
 
 ## Запуск локально
 ```
