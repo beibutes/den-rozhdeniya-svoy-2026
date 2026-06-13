@@ -210,6 +210,35 @@ async function renderRsvp() {
   }
 }
 
+// ── «Добавить в календарь» ─────────────────────────────────────────
+function initCalendar() {
+  const btn = document.getElementById("cal-btn");
+  const menu = document.getElementById("cal-menu");
+  const g = document.getElementById("cal-google");
+  if (!btn || !menu) return;
+
+  if (g) {
+    g.href =
+      "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+      "&text=" + encodeURIComponent("День рождения (41) 🎉") +
+      "&dates=20261009T130000Z/20261009T170000Z" +
+      "&details=" + encodeURIComponent(
+        "Отпразднуем вместе! Приглашение: https://beibutes.github.io/den-rozhdeniya-svoy-2026/"
+      ) +
+      "&location=" + encodeURIComponent("Ресторан Svoy, ул. Жумабаева, 24, Астана");
+  }
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.hidden = !menu.hidden;
+  });
+  document.addEventListener("click", (e) => {
+    if (!menu.hidden && !menu.contains(e.target) && e.target !== btn) {
+      menu.hidden = true;
+    }
+  });
+}
+
 // ── Учёт посещений (один раз за сессию браузера) ──────────────────
 function getVisitorId() {
   let vid = localStorage.getItem("birthday_visitor_id");
@@ -238,6 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("wishlist").addEventListener("click", onGridClick);
   refresh();
   renderRsvp();
+  initCalendar();
   logVisitOnce();
 
   // Реальное время: подхватываем брони других гостей (Supabase)

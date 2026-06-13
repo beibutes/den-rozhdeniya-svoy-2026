@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//den-rozhdeniya-svoy-2026//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:birthday-2026-10-09@beibutes.github.io
+DTSTAMP:20260614T000000Z
+DTSTART:20261009T130000Z
+DTEND:20261009T170000Z
+SUMMARY:День рождения (41) 🎉
+LOCATION:Ресторан Svoy\, ул. Жумабаева\, 24\, Астана
+DESCRIPTION:Отпразднуем вместе! Приглашение: https://beibutes.github.io/den-rozhdeniya-svoy-2026/
+URL:https://beibutes.github.io/den-rozhdeniya-svoy-2026/
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Завтра день рождения 🎉
+END:VALARM
+END:VEVENT
+END:VCALENDAR
