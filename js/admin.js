@@ -105,9 +105,14 @@ function renderStats(bookings, visits, rsvps) {
   const totalItems = (window.WISHLIST || []).length;
   const lastVisit = visits.length ? fmtDate(visits[0].created_at) : "—";
 
-  const people = rsvps.reduce((s, r) => s + 1 + (r.with_partner ? 1 : 0), 0);
+  const withPartner = rsvps.filter((r) => r.with_partner).length;
+  const people = rsvps.length + withPartner; // каждое подтверждение = 1, +1 за вторую половинку
   const cards = [
-    { label: "Придут", value: people, hint: `${rsvps.length} подтверждений` },
+    {
+      label: "Придут гостей",
+      value: people,
+      hint: `${rsvps.length} подтвердили · из них ${withPartner} со 2-й половинкой`,
+    },
     { label: "Уникальных гостей", value: uniqueVisitors, hint: "по устройствам/браузерам" },
     { label: "Всего заходов", value: visits.length, hint: "сессий на сайте" },
     { label: "Забронировано", value: `${bookings.length} / ${totalItems}`, hint: "позиций wish-листа" },
