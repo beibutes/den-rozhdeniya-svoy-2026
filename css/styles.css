@@ -1,11 +1,16 @@
 :root {
-  --bg: #0f0a1e;
+  --bg: #070b14;
+  --bg-2: #0d1526;
   --card: #ffffff;
-  --accent: #b388ff;
-  --accent-2: #ff7eb6;
-  --ink: #241b3a;
-  --muted: #6b6480;
-  --gold: #e7c66b;
+  --accent: #6366f1;   /* индиго */
+  --accent-2: #22d3ee; /* циан */
+  --accent-3: #a78bfa; /* фиолет */
+  --ink: #0f172a;
+  --muted: #64748b;
+  --gold: #5eead4;     /* мятно-циановый акцент (даты, имена) */
+  --line: #e2e8f0;
+  --font: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", var(--font);
 }
 
 * {
@@ -15,10 +20,11 @@
 }
 
 body {
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: var(--font);
   color: var(--ink);
   background: var(--bg);
   line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ── Hero ── */
@@ -32,19 +38,42 @@ body {
   text-align: center;
   padding: 48px 20px;
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(255, 126, 182, 0.35), transparent 60%),
-    radial-gradient(900px 500px at 80% 30%, rgba(179, 136, 255, 0.35), transparent 60%),
+    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.20), transparent 62%),
+    radial-gradient(820px 520px at 82% 18%, rgba(99, 102, 241, 0.28), transparent 60%),
+    radial-gradient(700px 500px at 12% 78%, rgba(167, 139, 250, 0.18), transparent 60%),
     var(--bg);
-  color: #fff;
+  color: #e8eefc;
   overflow: hidden;
+}
+/* техно-сетка поверх фона */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 75%);
+  pointer-events: none;
+}
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-kicker {
-  letter-spacing: 0.35em;
+  font-family: var(--font-display);
+  letter-spacing: 0.42em;
   text-transform: uppercase;
-  font-size: 13px;
-  color: var(--gold);
-  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-bottom: 20px;
+  padding: 7px 16px;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.06);
 }
 
 .hero-photo {
@@ -53,18 +82,21 @@ body {
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
-  margin-bottom: 22px;
-  border: 3px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 24px;
+  border: 2px solid rgba(94, 234, 212, 0.35);
   box-shadow:
-    0 0 0 6px rgba(231, 198, 107, 0.18),
-    0 18px 50px rgba(0, 0, 0, 0.45);
+    0 0 0 5px rgba(99, 102, 241, 0.16),
+    0 0 60px rgba(34, 211, 238, 0.25),
+    0 18px 50px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
-  font-size: clamp(36px, 8vw, 76px);
-  line-height: 1.05;
-  font-weight: 800;
-  background: linear-gradient(90deg, #fff, var(--accent-2), var(--accent));
+  font-family: var(--font-display);
+  font-size: clamp(40px, 8.5vw, 84px);
+  line-height: 1.03;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(100deg, #ffffff 10%, var(--accent-2) 45%, var(--accent-3) 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -72,10 +104,11 @@ body {
 
 .hero .age {
   display: inline-block;
-  margin-top: 14px;
-  font-size: clamp(18px, 3vw, 24px);
-  color: #fff;
-  opacity: 0.9;
+  margin-top: 18px;
+  max-width: 560px;
+  font-size: clamp(16px, 2.5vw, 21px);
+  color: #c7d2e8;
+  opacity: 0.92;
 }
 
 .hero-meta {
@@ -113,24 +146,27 @@ body {
 }
 
 .cd-box {
-  min-width: 78px;
-  padding: 16px 10px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
+  min-width: 82px;
+  padding: 18px 12px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
 }
 .cd-box span {
   display: block;
-  font-size: 34px;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 700;
   color: #fff;
+  font-variant-numeric: tabular-nums;
 }
 .cd-box small {
-  font-size: 11px;
-  letter-spacing: 0.15em;
+  font-size: 10px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(148, 163, 184, 0.85);
 }
 .cd-started {
   font-size: 26px;
@@ -221,17 +257,21 @@ body {
 
 /* ── Wishlist section ── */
 .wishlist-section {
-  background: #f6f3ff;
-  padding: 72px 20px 96px;
+  background:
+    radial-gradient(900px 400px at 50% -5%, rgba(99, 102, 241, 0.06), transparent 60%),
+    #f6f8fc;
+  padding: 76px 20px 100px;
 }
 .section-head {
   max-width: 720px;
-  margin: 0 auto 40px;
+  margin: 0 auto 44px;
   text-align: center;
 }
 .section-head h2 {
-  font-size: clamp(28px, 5vw, 40px);
-  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
 }
 .section-head p {
   color: var(--muted);
@@ -239,23 +279,38 @@ body {
 
 .tier {
   max-width: 1080px;
-  margin: 0 auto 44px;
+  margin: 0 auto 48px;
 }
 .tier-head {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin: 0 0 18px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e6ddfb;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
 }
 .tier-head h3 {
-  font-size: 22px;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 600;
   color: var(--ink);
+  position: relative;
+  padding-left: 14px;
+}
+.tier-head h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent));
 }
 .tier-range {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 .grid {
   max-width: 1080px;
@@ -279,16 +334,18 @@ body {
 
 .card {
   background: var(--card);
+  border: 1px solid var(--line);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(36, 27, 58, 0.08);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   display: flex;
   flex-direction: column;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(36, 27, 58, 0.16);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px rgba(99, 102, 241, 0.16);
+  border-color: rgba(99, 102, 241, 0.35);
 }
 
 .card-img {
@@ -338,7 +395,10 @@ body {
   flex: 1;
 }
 .card-body h3 {
+  font-family: var(--font-display);
   font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 .card-desc {
   color: var(--muted);
@@ -347,8 +407,9 @@ body {
 }
 .price {
   font-weight: 700;
-  color: var(--ink);
+  color: var(--accent);
   margin-top: 4px;
+  font-variant-numeric: tabular-nums;
 }
 .reserved-note {
   font-size: 14px;
@@ -359,21 +420,29 @@ body {
   margin-top: 10px;
   border: none;
   cursor: pointer;
-  padding: 11px 16px;
+  padding: 12px 16px;
   border-radius: 12px;
   font-size: 15px;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  transition: opacity 0.15s ease;
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 .btn:hover {
-  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.4);
 }
 .btn-ghost {
   background: transparent;
   color: var(--muted);
-  border: 1px solid #ddd6f0;
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.btn-ghost:hover {
+  transform: none;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* ── Footer ── */
