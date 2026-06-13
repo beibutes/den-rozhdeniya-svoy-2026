@@ -141,6 +141,10 @@ async function renderRsvp() {
       : "";
     box.innerHTML = `
       <p class="rsvp-status">🎉 Спасибо! Вы подтвердили участие как <b>${r.name}</b>${partnerNote}</p>
+      <a class="rsvp-wishlink" href="#wishlist">
+        Загляните в мой Wish-лист
+        <span class="rsvp-arrow">↓</span>
+      </a>
       <button class="btn btn-ghost" id="rsvp-cancel">Отменить участие</button>`;
     document.getElementById("rsvp-cancel").addEventListener("click", async () => {
       await store.rsvpUnset(getVisitorId());
