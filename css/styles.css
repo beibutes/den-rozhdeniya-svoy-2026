@@ -129,6 +129,8 @@ body {
 }
 
 .hero-meta {
+  position: relative;
+  z-index: 20; /* выше RSVP/таймера, чтобы меню календаря не перекрывалось */
   margin-top: 28px;
   display: grid;
   gap: 8px;
