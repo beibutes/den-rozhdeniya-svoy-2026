@@ -128,9 +128,16 @@ body {
 .hero-meta b {
   color: var(--gold);
 }
+.action-row {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .map-link {
   display: inline-block;
-  margin-top: 6px;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -145,11 +152,6 @@ body {
 }
 
 /* Календарь */
-.cal-section {
-  display: flex;
-  justify-content: center;
-  padding: 0 20px 56px;
-}
 .cal-wrap {
   position: relative;
   display: flex;
