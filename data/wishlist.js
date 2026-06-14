@@ -42,6 +42,17 @@ window.WISHLIST = [
     "url": "https://www.plaud.ai/products/notepin"
   },
   {
+    "id": "whisky-set",
+    "title": "Хрустальный набор для виски",
+    "desc": "Бокалы и графин Riedel / Nude / Waterford.",
+    "priceText": "45 000 – 80 000 ₸",
+    "tier": "budget",
+    "top": false,
+    "emoji": "🥃",
+    "img": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=640&q=80",
+    "url": "https://www.riedel.com/"
+  },
+  {
     "id": "remarkable",
     "title": "reMarkable Paper Pro",
     "desc": "E-ink планшет для заметок и чтения без отвлечений.",
@@ -53,15 +64,15 @@ window.WISHLIST = [
     "url": "https://remarkable.com/store/remarkable-paper/pro"
   },
   {
-    "id": "headphones",
-    "title": "Sony WH-1000XM6",
-    "desc": "Накладные наушники с шумоподавлением — для перелётов.",
-    "priceText": "225 000 ₸",
+    "id": "airpods-max",
+    "title": "AirPods Max",
+    "desc": "Накладные наушники Apple с шумоподавлением (USB-C).",
+    "priceText": "290 000 ₸",
     "tier": "mid",
     "top": false,
     "emoji": "🎧",
-    "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=640&q=80",
-    "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b"
+    "img": "img/products/airpods-max.png",
+    "url": "https://www.apple.com/airpods-max/"
   },
   {
     "id": "withings-scan",
@@ -141,15 +152,15 @@ window.WISHLIST = [
     "url": "https://www.tonal.com"
   },
   {
-    "id": "luggage",
-    "title": "Чемодан Rimowa",
-    "desc": "Премиальный чемодан для поездок.",
-    "priceText": "400 000 – 580 000 ₸",
+    "id": "steam-closet",
+    "title": "Паровой шкаф LG Styler / Samsung AirDresser",
+    "desc": "Уход за костюмами без химчистки.",
+    "priceText": "800 000 – 1 050 000 ₸",
     "tier": "premium",
     "top": false,
-    "emoji": "🧳",
-    "img": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=640&q=80",
-    "url": "https://www.rimowa.com"
+    "emoji": "🧥",
+    "img": "https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=640&q=80",
+    "url": "https://www.lg.com/us/lg-styler"
   },
   {
     "id": "wine-fridge",

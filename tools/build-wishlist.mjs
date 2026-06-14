@@ -59,6 +59,15 @@ const CATALOG = [
   { match: ["винный", "холодильник"], id: "wine-fridge", emoji: "🍷", title: "Винный холодильник + бутылка",
     desc: "Винный шкаф и коллекционная бутылка.",
     img: IMG("photo-1510812431401-41d2bd2722f3"), url: "" },
+  { match: ["виски", "хрустальн", "riedel", "waterford", "nude"], id: "whisky-set", emoji: "🥃", title: "Хрустальный набор для виски",
+    desc: "Бокалы и графин Riedel / Nude / Waterford.",
+    img: IMG("photo-1527281400683-1aae777175f8"), url: "https://www.riedel.com/" },
+  { match: ["airpods max"], id: "airpods-max", emoji: "🎧", title: "AirPods Max",
+    desc: "Накладные наушники Apple с шумоподавлением (USB-C).",
+    img: LOCAL("airpods-max.png"), url: "https://www.apple.com/airpods-max/" },
+  { match: ["паровой шкаф", "styler", "airdresser"], id: "steam-closet", emoji: "🧥", title: "Паровой шкаф LG Styler / Samsung AirDresser",
+    desc: "Уход за костюмами без химчистки.",
+    img: IMG("photo-1558997519-83ea9252edf8"), url: "https://www.lg.com/us/lg-styler" },
 ];
 
 const TIERS = [
@@ -71,17 +80,30 @@ function fmtNum(n) {
   return Math.round(n).toLocaleString("ru-RU").replace(/ /g, " ");
 }
 
+function multOf(tok) {
+  if (/млн/i.test(tok)) return 1e6;
+  if (/тыс|к/i.test(tok)) return 1e3;
+  return null;
+}
+function numOf(tok) {
+  return parseFloat(tok.replace(/[~$₸\s]/g, "").replace(/млн|тыс|к/gi, "").replace(",", "."));
+}
 function formatPrice(raw) {
   let s = raw.trim();
   if (s.includes("→")) s = s.split("→").pop().trim(); // берём значение в ₸
   s = s.replace(/\(.*?\)/g, "").replace(/\.$/, "").trim();
   const from = /^от[\s~]/i.test(s);
-  s = s.replace(/^от\s*/i, "").replace(/[~$₸]/g, "").trim();
-  let mult = 1;
-  if (/млн/i.test(s)) mult = 1e6;
-  else if (/к/i.test(s)) mult = 1e3;
-  s = s.replace(/млн|тыс|к/gi, "").trim();
-  const nums = s.split(/[–-]/).map((x) => parseFloat(x.replace(",", ".")) * mult).filter((x) => !isNaN(x));
+  s = s.replace(/^от\s*/i, "").trim();
+  const parts = s.split(/[–-]/).map((x) => x.trim()).filter(Boolean);
+  // множитель у каждого числа свой; если нет — наследуем последний явный (для «8–25к»)
+  const mults = parts.map(multOf);
+  const lastMult = [...mults].reverse().find((m) => m != null) || 1;
+  const nums = parts
+    .map((p, i) => {
+      const n = numOf(p);
+      return isNaN(n) ? null : n * (mults[i] != null ? mults[i] : lastMult);
+    })
+    .filter((x) => x != null);
   if (!nums.length) return raw.trim();
   const body = nums.length > 1 ? `${fmtNum(nums[0])} – ${fmtNum(nums[1])}` : fmtNum(nums[0]);
   return (from ? "от " : "") + body + " ₸";
