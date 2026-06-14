@@ -197,13 +197,13 @@ window.WISHLIST = [
   },
   {
     "id": "wine-fridge",
-    "title": "Винный холодильник + бутылка",
-    "desc": "Винный шкаф и коллекционная бутылка.",
+    "title": "Винный шкаф Liebherr Vinidor",
+    "desc": "Двухзонный, ~34 бутылки + коллекционная бутылка.",
     "priceText": "от 250 000 ₸",
     "tier": "premium",
     "top": false,
     "emoji": "🍷",
     "img": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=640&q=80",
-    "url": ""
+    "url": "https://home.liebherr.com/en/int/products/household-appliances/wine-cabinets/vinidor/vinidor.html"
   }
 ];
