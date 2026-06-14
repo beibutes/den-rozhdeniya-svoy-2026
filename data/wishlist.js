@@ -152,6 +152,17 @@ window.WISHLIST = [
     "url": "https://www.getgochess.com"
   },
   {
+    "id": "wine-fridge",
+    "title": "Винный шкаф Caso WineDuett 12",
+    "desc": "Двухзонный, 12 бутылок, настольный + коллекционная бутылка.",
+    "priceText": "120 000 – 180 000 ₸",
+    "tier": "mid",
+    "top": false,
+    "emoji": "🍷",
+    "img": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=640&q=80",
+    "url": "https://www.caso-design.de/en/produkte/weinkuehlschraenke/"
+  },
+  {
     "id": "eight-sleep",
     "title": "Eight Sleep Pod 5",
     "desc": "Умный топпер с терморегуляцией и трекингом сна.",
@@ -194,16 +205,5 @@ window.WISHLIST = [
     "emoji": "🧥",
     "img": "img/products/airdresser.jpg",
     "url": "https://www.samsung.com/us/home-appliances/airdresser/"
-  },
-  {
-    "id": "wine-fridge",
-    "title": "Винный шкаф Liebherr Vinidor",
-    "desc": "Двухзонный, ~34 бутылки + коллекционная бутылка.",
-    "priceText": "от 250 000 ₸",
-    "tier": "premium",
-    "top": false,
-    "emoji": "🍷",
-    "img": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=640&q=80",
-    "url": "https://home.liebherr.com/en/int/products/household-appliances/wine-cabinets/vinidor/vinidor.html"
   }
 ];
