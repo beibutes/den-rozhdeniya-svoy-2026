@@ -82,6 +82,15 @@ body {
   background: rgba(240, 185, 94, 0.06);
 }
 
+.hero-invite-top {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: clamp(18px, 3.2vw, 28px);
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+
 .hero-photo {
   width: clamp(150px, 34vw, 210px);
   height: clamp(150px, 34vw, 210px);
