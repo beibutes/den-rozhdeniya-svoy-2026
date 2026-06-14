@@ -20,15 +20,70 @@ window.WISHLIST_TIERS = [
 
 window.WISHLIST = [
   {
-    "id": "books",
-    "title": "Книги (нон-фикшн)",
-    "desc": "Outlive, Why We Sleep, Deep Medicine, Co-Intelligence, The Code Breaker, 7 Powers.",
-    "priceText": "8 000 – 30 000 ₸",
+    "id": "outlive",
+    "title": "«Outlive»",
+    "desc": "",
+    "priceText": "12 000 ₸",
     "tier": "budget",
     "top": false,
-    "emoji": "📚",
-    "img": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=640&q=80",
-    "url": "https://peterattiamd.com/outlive/"
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
+  },
+  {
+    "id": "why-we-sleep",
+    "title": "«Why We Sleep»",
+    "desc": "",
+    "priceText": "10 000 ₸",
+    "tier": "budget",
+    "top": false,
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
+  },
+  {
+    "id": "deep-medicine",
+    "title": "«Deep Medicine»",
+    "desc": "",
+    "priceText": "12 000 ₸",
+    "tier": "budget",
+    "top": false,
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
+  },
+  {
+    "id": "co-intelligence",
+    "title": "«Co-Intelligence»",
+    "desc": "",
+    "priceText": "12 000 ₸",
+    "tier": "budget",
+    "top": false,
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
+  },
+  {
+    "id": "the-code-breaker",
+    "title": "«The Code Breaker»",
+    "desc": "",
+    "priceText": "12 000 ₸",
+    "tier": "budget",
+    "top": false,
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
+  },
+  {
+    "id": "7-powers",
+    "title": "«7 Powers»",
+    "desc": "",
+    "priceText": "12 000 ₸",
+    "tier": "budget",
+    "top": false,
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
   },
   {
     "id": "plaud-notepin",
@@ -51,17 +106,6 @@ window.WISHLIST = [
     "emoji": "🥃",
     "img": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=640&q=80",
     "url": "https://www.riedel.com/"
-  },
-  {
-    "id": "remarkable",
-    "title": "reMarkable Paper Pro",
-    "desc": "E-ink планшет для заметок и чтения без отвлечений.",
-    "priceText": "310 000 ₸",
-    "tier": "mid",
-    "top": false,
-    "emoji": "📝",
-    "img": "img/products/remarkable.jpg",
-    "url": "https://remarkable.com/store/remarkable-paper/pro"
   },
   {
     "id": "airpods-max",
@@ -119,37 +163,26 @@ window.WISHLIST = [
     "url": "https://www.eightsleep.com/pod/"
   },
   {
-    "id": "ebike",
-    "title": "Specialized Turbo Vado (e-bike)",
-    "desc": "Электровелосипед премиум-класса.",
-    "priceText": "1 600 000 – 2 600 000 ₸",
+    "id": "canyon-endurace-cf-8",
+    "title": "Canyon Endurace CF 8",
+    "desc": "",
+    "priceText": "1 260 000 – 1 420 000 ₸",
     "tier": "premium",
     "top": false,
-    "emoji": "🚲",
-    "img": "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=640&q=80",
-    "url": "https://www.specialized.com/us/en/c/e-bikes/turbo-vado"
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
   },
   {
-    "id": "dgx-spark",
-    "title": "NVIDIA DGX Spark",
-    "desc": "Персональный ИИ-суперкомпьютер для локальных LLM.",
-    "priceText": "2 100 000 – 2 500 000 ₸",
+    "id": "bambu-lab-p1s",
+    "title": "Bambu Lab P1S",
+    "desc": "",
+    "priceText": "370 000 – 500 000 ₸",
     "tier": "premium",
     "top": false,
-    "emoji": "🧠",
-    "img": "img/products/dgx-spark.jpg",
-    "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
-  },
-  {
-    "id": "home-gym",
-    "title": "Tonal (силовой тренажёр)",
-    "desc": "Умный домашний силовой тренажёр.",
-    "priceText": "1 000 000 – 2 100 000 ₸",
-    "tier": "premium",
-    "top": false,
-    "emoji": "🏋️",
-    "img": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&q=80",
-    "url": "https://www.tonal.com"
+    "emoji": "🎁",
+    "img": "",
+    "url": ""
   },
   {
     "id": "steam-closet",
