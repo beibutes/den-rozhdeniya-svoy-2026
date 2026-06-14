@@ -38,12 +38,12 @@ body {
   text-align: center;
   padding: 48px 20px;
   background:
-    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.22), transparent 62%),
-    radial-gradient(820px 620px at 85% 16%, rgba(99, 102, 241, 0.40), transparent 60%),
-    radial-gradient(760px 620px at 8% 88%, rgba(167, 139, 250, 0.34), transparent 60%),
-    radial-gradient(72% 58% at 50% 52%, rgba(7, 11, 20, 0.55), rgba(7, 11, 20, 0) 80%),
-    linear-gradient(180deg, rgba(7, 11, 20, 0.38) 0%, rgba(7, 11, 20, 0.28) 35%, rgba(7, 11, 20, 0.96) 100%),
-    url("../img/hero-bg.jpg") center 14% / cover no-repeat,
+    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.20), transparent 62%),
+    radial-gradient(820px 640px at 85% 14%, rgba(99, 102, 241, 0.30), transparent 62%),
+    radial-gradient(760px 640px at 8% 90%, rgba(167, 139, 250, 0.28), transparent 62%),
+    radial-gradient(70% 55% at 50% 50%, rgba(7, 11, 20, 0.30), rgba(7, 11, 20, 0) 78%),
+    linear-gradient(180deg, rgba(7, 11, 20, 0.20) 0%, rgba(7, 11, 20, 0.10) 32%, rgba(7, 11, 20, 0.70) 78%, rgba(7, 11, 20, 0.96) 100%),
+    url("../img/hero-bg.jpg") center 12% / cover no-repeat,
     var(--bg);
   color: #eef2fb;
   overflow: hidden;
