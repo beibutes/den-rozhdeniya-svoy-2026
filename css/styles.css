@@ -34,16 +34,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: center;
-  padding: 48px 20px;
+  padding: 48px 20px 64px;
   background:
-    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.20), transparent 62%),
-    radial-gradient(820px 640px at 85% 14%, rgba(99, 102, 241, 0.30), transparent 62%),
-    radial-gradient(760px 640px at 8% 90%, rgba(167, 139, 250, 0.28), transparent 62%),
-    radial-gradient(70% 55% at 50% 50%, rgba(7, 11, 20, 0.30), rgba(7, 11, 20, 0) 78%),
-    linear-gradient(180deg, rgba(7, 11, 20, 0.20) 0%, rgba(7, 11, 20, 0.10) 32%, rgba(7, 11, 20, 0.70) 78%, rgba(7, 11, 20, 0.96) 100%),
-    url("../img/hero-bg.jpg") center 12% / cover no-repeat,
+    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.18), transparent 62%),
+    radial-gradient(820px 640px at 88% 60%, rgba(99, 102, 241, 0.30), transparent 60%),
+    radial-gradient(760px 640px at 6% 92%, rgba(167, 139, 250, 0.30), transparent 60%),
+    linear-gradient(180deg, rgba(7, 11, 20, 0.05) 0%, rgba(7, 11, 20, 0) 28%, rgba(7, 11, 20, 0.45) 50%, rgba(7, 11, 20, 0.88) 72%, rgba(7, 11, 20, 0.98) 100%),
+    url("../img/hero-bg.jpg") center top / cover no-repeat,
     var(--bg);
   color: #eef2fb;
   overflow: hidden;
