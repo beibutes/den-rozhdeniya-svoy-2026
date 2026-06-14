@@ -61,7 +61,7 @@ const CATALOG = [
     img: LOCAL("dji-camera.png"), url: "https://www.dji.com/osmo-pocket-3" },
   { match: ["шахмат"], id: "smart-chess", emoji: "♟️", title: "GoChess (умные шахматы)",
     desc: "Умная доска: ходит сама и помогает учиться игре.",
-    img: IMG("photo-1528819622765-d6bcf132f793"), url: "https://www.getgochess.com" },
+    img: LOCAL("gochess.jpg"), url: "https://www.getgochess.com" },
   { match: ["eight sleep"], id: "eight-sleep", emoji: "🛏️", title: "Eight Sleep Pod 5",
     desc: "Умный топпер с терморегуляцией и трекингом сна.",
     img: LOCAL("eight-sleep.jpg"), url: "https://www.eightsleep.com/pod/" },

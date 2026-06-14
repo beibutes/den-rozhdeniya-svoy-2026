@@ -148,7 +148,7 @@ window.WISHLIST = [
     "tier": "mid",
     "top": false,
     "emoji": "♟️",
-    "img": "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?w=640&q=80",
+    "img": "img/products/gochess.jpg",
     "url": "https://www.getgochess.com"
   },
   {
