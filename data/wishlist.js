@@ -99,13 +99,13 @@ window.WISHLIST = [
   {
     "id": "whisky-set",
     "title": "Хрустальный набор для виски",
-    "desc": "Бокалы и графин Riedel / Nude / Waterford.",
+    "desc": "Графин и бокалы Waterford Markham, хрусталь.",
     "priceText": "45 000 – 80 000 ₸",
     "tier": "budget",
     "top": false,
     "emoji": "🥃",
-    "img": "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=640&q=80",
-    "url": "https://www.riedel.com/"
+    "img": "img/products/whisky-set.jpg",
+    "url": "https://www.waterford.com/"
   },
   {
     "id": "airpods-max",
