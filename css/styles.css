@@ -38,12 +38,16 @@ body {
   text-align: center;
   padding: 48px 20px;
   background:
-    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.20), transparent 62%),
-    radial-gradient(820px 520px at 82% 18%, rgba(99, 102, 241, 0.28), transparent 60%),
-    radial-gradient(700px 500px at 12% 78%, rgba(167, 139, 250, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.22), transparent 62%),
+    radial-gradient(820px 620px at 85% 16%, rgba(99, 102, 241, 0.40), transparent 60%),
+    radial-gradient(760px 620px at 8% 88%, rgba(167, 139, 250, 0.34), transparent 60%),
+    radial-gradient(72% 58% at 50% 52%, rgba(7, 11, 20, 0.55), rgba(7, 11, 20, 0) 80%),
+    linear-gradient(180deg, rgba(7, 11, 20, 0.38) 0%, rgba(7, 11, 20, 0.28) 35%, rgba(7, 11, 20, 0.96) 100%),
+    url("../img/hero-bg.jpg") center 14% / cover no-repeat,
     var(--bg);
-  color: #e8eefc;
+  color: #eef2fb;
   overflow: hidden;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 /* техно-сетка поверх фона */
 .hero::before {
