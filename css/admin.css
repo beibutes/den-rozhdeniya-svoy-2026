@@ -2,8 +2,8 @@
   min-height: 100vh;
   color: var(--light);
   background:
-    radial-gradient(900px 500px at 80% -5%, rgba(99, 102, 241, 0.16), transparent 60%),
-    radial-gradient(800px 600px at 5% 100%, rgba(167, 139, 250, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 80% -5%, rgba(224, 151, 92, 0.16), transparent 60%),
+    radial-gradient(800px 600px at 5% 100%, rgba(217, 140, 106, 0.12), transparent 60%),
     var(--bg);
 }
 
@@ -167,8 +167,8 @@
   letter-spacing: 0.04em;
 }
 .data-table code {
-  background: rgba(99, 102, 241, 0.18);
-  color: #c7d2fe;
+  background: rgba(224, 151, 92, 0.18);
+  color: #f0d9bf;
   padding: 2px 6px;
   border-radius: 6px;
   font-size: 12px;
