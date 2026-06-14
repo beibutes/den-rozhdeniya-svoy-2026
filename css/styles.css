@@ -38,26 +38,26 @@ body {
   text-align: center;
   padding: 48px 20px 64px;
   background:
-    radial-gradient(900px 520px at 50% -8%, rgba(34, 211, 238, 0.18), transparent 62%),
-    radial-gradient(820px 640px at 88% 60%, rgba(99, 102, 241, 0.30), transparent 60%),
-    radial-gradient(760px 640px at 6% 92%, rgba(167, 139, 250, 0.30), transparent 60%),
-    linear-gradient(180deg, rgba(7, 11, 20, 0.05) 0%, rgba(7, 11, 20, 0) 22%, rgba(7, 11, 20, 0.5) 40%, rgba(7, 11, 20, 0.95) 52%, #070b14 62%),
-    url("../img/hero-bg.jpg?v=2") center top / cover no-repeat,
+    radial-gradient(900px 520px at 50% 72%, rgba(34, 211, 238, 0.16), transparent 60%),
+    radial-gradient(820px 600px at 86% 80%, rgba(99, 102, 241, 0.32), transparent 60%),
+    radial-gradient(760px 600px at 6% 96%, rgba(167, 139, 250, 0.30), transparent 60%),
     var(--bg);
   color: #eef2fb;
   overflow: hidden;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
-/* техно-сетка поверх фона */
+/* фото только в верхней части, плавно растворяется в тёмный фон */
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 75%);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64%;
+  background: url("../img/hero-bg.jpg?v=2") center top / cover no-repeat;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+  z-index: 0;
   pointer-events: none;
 }
 .hero > * {
