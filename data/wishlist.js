@@ -75,37 +75,15 @@ window.WISHLIST = [
     "url": "https://www.waterford.com/"
   },
   {
-    "id": "airpods-max",
-    "title": "AirPods Max",
-    "desc": "Накладные наушники Apple с шумоподавлением (USB-C).",
-    "priceText": "290 000 ₸",
+    "id": "wine-fridge",
+    "title": "Винный шкаф Caso WineDuett 12",
+    "desc": "Двухзонный, 12 бутылок, настольный.",
+    "priceText": "120 000 – 180 000 ₸",
     "tier": "mid",
     "top": false,
-    "emoji": "🎧",
-    "img": "img/products/airpods-max.png",
-    "url": "https://www.apple.com/airpods-max/"
-  },
-  {
-    "id": "withings-scan",
-    "title": "Withings Body Scan",
-    "desc": "Умные весы: состав тела и ЭКГ.",
-    "priceText": "210 000 ₸",
-    "tier": "mid",
-    "top": false,
-    "emoji": "⚖️",
-    "img": "img/products/withings-scan.jpg",
-    "url": "https://www.withings.com/us/en/body-scan"
-  },
-  {
-    "id": "dji-camera",
-    "title": "DJI Osmo Pocket 3",
-    "desc": "Карманная камера со стабилизацией для путешествий.",
-    "priceText": "180 000 – 230 000 ₸",
-    "tier": "mid",
-    "top": false,
-    "emoji": "🎥",
-    "img": "img/products/dji-camera.png",
-    "url": "https://www.dji.com/osmo-pocket-3"
+    "emoji": "🍷",
+    "img": "img/products/wine-fridge.jpg",
+    "url": "https://www.caso-design.de/en/produkte/weinkuehlschraenke/"
   },
   {
     "id": "smart-chess",
@@ -119,15 +97,37 @@ window.WISHLIST = [
     "url": "https://www.getgochess.com"
   },
   {
-    "id": "wine-fridge",
-    "title": "Винный шкаф Caso WineDuett 12",
-    "desc": "Двухзонный, 12 бутылок, настольный.",
-    "priceText": "120 000 – 180 000 ₸",
+    "id": "airpods-max",
+    "title": "AirPods Max",
+    "desc": "Накладные наушники Apple с шумоподавлением (USB-C).",
+    "priceText": "290 000 ₸",
     "tier": "mid",
     "top": false,
-    "emoji": "🍷",
-    "img": "img/products/wine-fridge.jpg",
-    "url": "https://www.caso-design.de/en/produkte/weinkuehlschraenke/"
+    "emoji": "🎧",
+    "img": "img/products/airpods-max.png",
+    "url": "https://www.apple.com/airpods-max/"
+  },
+  {
+    "id": "dji-camera",
+    "title": "DJI Osmo Pocket 3",
+    "desc": "Карманная камера со стабилизацией для путешествий.",
+    "priceText": "180 000 – 230 000 ₸",
+    "tier": "mid",
+    "top": false,
+    "emoji": "🎥",
+    "img": "img/products/dji-camera.png",
+    "url": "https://www.dji.com/osmo-pocket-3"
+  },
+  {
+    "id": "withings-scan",
+    "title": "Withings Body Scan",
+    "desc": "Умные весы: состав тела и ЭКГ.",
+    "priceText": "210 000 ₸",
+    "tier": "mid",
+    "top": false,
+    "emoji": "⚖️",
+    "img": "img/products/withings-scan.jpg",
+    "url": "https://www.withings.com/us/en/body-scan"
   },
   {
     "id": "steam-closet",
@@ -152,17 +152,6 @@ window.WISHLIST = [
     "url": "https://bambulab.com/en/p1"
   },
   {
-    "id": "eight-sleep",
-    "title": "Eight Sleep Pod 5",
-    "desc": "Умный топпер с терморегуляцией и трекингом сна.",
-    "priceText": "от 1 000 000 ₸",
-    "tier": "premium",
-    "top": false,
-    "emoji": "🛏️",
-    "img": "img/products/eight-sleep.jpg",
-    "url": "https://www.eightsleep.com/pod/"
-  },
-  {
     "id": "canyon-endurace",
     "title": "Canyon Endurace CF 8",
     "desc": "Шоссейный велосипед: карбон, Shimano 105 Di2.",
@@ -172,5 +161,16 @@ window.WISHLIST = [
     "emoji": "🚲",
     "img": "img/products/canyon-endurace.jpg",
     "url": "https://www.canyon.com/en-us/road-bikes/endurance-bikes/endurace/"
+  },
+  {
+    "id": "eight-sleep",
+    "title": "Eight Sleep Pod 5",
+    "desc": "Умный топпер с терморегуляцией и трекингом сна.",
+    "priceText": "от 1 000 000 ₸",
+    "tier": "premium",
+    "top": false,
+    "emoji": "🛏️",
+    "img": "img/products/eight-sleep.jpg",
+    "url": "https://www.eightsleep.com/pod/"
   }
 ];
