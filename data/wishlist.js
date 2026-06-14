@@ -159,7 +159,7 @@ window.WISHLIST = [
     "tier": "mid",
     "top": false,
     "emoji": "🍷",
-    "img": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=640&q=80",
+    "img": "img/products/wine-fridge.jpg",
     "url": "https://www.caso-design.de/en/produkte/weinkuehlschraenke/"
   },
   {
