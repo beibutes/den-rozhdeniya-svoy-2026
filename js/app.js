@@ -177,7 +177,7 @@ async function renderRsvp() {
       ? ' <span class="rsvp-partner">+ вторая половинка</span>'
       : "";
     box.innerHTML = `
-      <p class="rsvp-status">🎉 Спасибо! Вы подтвердили участие как <b>${r.name}</b>${partnerNote}</p>
+      <p class="rsvp-status">Уважаемый(ая) <b>${r.name}</b>${partnerNote}, спасибо, что подтвердили участие. Буду ждать Вас!</p>
       <a class="rsvp-wishlink" href="#wishlist">
         Загляните в мой Wish-лист
         <span class="rsvp-arrow">↓</span>
